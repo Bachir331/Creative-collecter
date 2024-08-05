@@ -15,11 +15,13 @@ function Picture({ id, url }) {
       ref={drag}
       src={url}
       key={id}
+      width="300px"
       style={{
         border: isDragging ? "5px solid pink" : "0px",
         transition: "width 0.2s ease-out", // Optional: smooth transition
       }}
-      className="rounded-lg"
+      className="rounded-lg " 
+      alt="No image found "
     />
   );
 }
