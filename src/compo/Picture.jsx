@@ -1,6 +1,5 @@
 import React from "react";
 import { useDrag } from "react-dnd";
-import Draggable from "react-draggable";
 
 function Picture({ id, url }) {
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -10,6 +9,7 @@ function Picture({ id, url }) {
       isDragging: !!monitor.isDragging(),
     }),
   }));
+
   return (
     <img
       ref={drag}
@@ -17,11 +17,12 @@ function Picture({ id, url }) {
       key={id}
       width="300px"
       style={{
-        border: isDragging ? "5px solid pink" : "0px",
-        transition: "width 0.2s ease-out", // Optional: smooth transition
+        border: isDragging ? "5px solid #FF5F00" : "0px",
+        transition: "border-color 0.2s ease-out", // Optional: smooth transition for border color change
+        cursor: isDragging ? "grabbing" : "grab", // Cursor style when dragging
       }}
-      className="rounded-lg " 
-      alt="No image found "
+      className="rounded-lg"
+      alt="No image found"
     />
   );
 }

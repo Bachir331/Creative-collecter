@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Creative_collecter_gallery/",
+  base: "/Creative-collecter/", // Adjust to your GitHub Pages path
 });
