@@ -107,7 +107,7 @@ setBoard((prevBoard) => prevBoard.concat(pictureToAdd));
       url: newPictureUrl,
     };
 
-    setPictureList([...PictureList, newPicture]); // Add new picture to PictureList
+    PictureList.push(newPicture)// Add new picture to PictureList
 
     setNewPictureUrl(""); // Clear input after adding picture
   };
@@ -359,7 +359,7 @@ shadow-gray-300  rounded-lg   pt-16 fixed inset-y-0 left-0 z-10 flex flex-col"
                 backgroundSize: "20px 20px",
                 backgroundColor: "#f5f5f5", // Optional: Background color to set base color of the grid
               }}
-              className="w-[50000px] h-[50000px]  z-1  grid    justify-center  content-center	"
+              className="w-[50000px] h-[50000px]  z-1  grid   justify-center  content-center	"
               ref={drop}
             >
               {board.map((draggable, index) => {
