@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 
-function Drib({ id, url, removeItem }) {
+function ResizableDraggableItem({ id, url, removeItem }) {
   const [scale, setScale] = useState(1);
   const [dragging, setDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -302,4 +302,4 @@ function Drib({ id, url, removeItem }) {
   );
 }
 
-export default Drib;
+export default ResizableDraggableItem;
